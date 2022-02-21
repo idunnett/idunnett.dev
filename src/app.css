@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mdx li {
+  list-style: disc;
+  list-style-position: inside;
+  margin-left: 16px;
+}
+
+.mdx p {
+  margin: 16px 0;
+}
+
+.mdx .references p {
+  text-indent: -3em;
+  margin-left: 3em;
+}
+
+.mdx a {
+  color: rgb(147, 197, 253);
+}

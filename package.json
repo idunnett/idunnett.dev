@@ -1,0 +1,34 @@
+{
+  "name": "idunnett",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/three": "^0.137.0",
+    "autoprefixer": "^10.4.2",
+    "mdsvex": "^0.10.5",
+    "postcss": "^8.4.6",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.10.1",
+    "svelte-preprocess-markdown": "^2.7.3",
+    "svelte-typewriter": "^3.0.0-alpha.11",
+    "tailwindcss": "^3.0.23",
+    "tslib": "^2.3.1",
+    "typescript": "~4.5.4"
+  },
+  "type": "module",
+  "dependencies": {
+    "svelte-markdown": "^0.2.2",
+    "three": "^0.137.5"
+  }
+}
