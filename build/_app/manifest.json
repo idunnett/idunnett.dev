@@ -1,0 +1,181 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-6919aeae.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/blog/barriers-of-human-brain-replication.md",
+      "src/routes/blog/coporate-culture-ibm-william-murrel.md",
+      "src/routes/blog/ada-lovelace-the-first-programmer.md",
+      "src/routes/blog/brightside-of-disappointment.md",
+      "src/routes/blog/is-igkids-ethical.md",
+      "src/routes/blog/cs-learn-video.md"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-f81fa82f.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-c12d17bd.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-f7074825.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-3baa97b0.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-2a4fc443.css"
+    ]
+  },
+  "src/routes/blog/barriers-of-human-brain-replication.md": {
+    "file": "pages/blog/barriers-of-human-brain-replication.md-c31ecec5.js",
+    "src": "src/routes/blog/barriers-of-human-brain-replication.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js",
+      "__post-78cc9e60.js"
+    ]
+  },
+  "src/routes/blog/coporate-culture-ibm-william-murrel.md": {
+    "file": "pages/blog/coporate-culture-ibm-william-murrel.md-ef2bfcd5.js",
+    "src": "src/routes/blog/coporate-culture-ibm-william-murrel.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js",
+      "__post-78cc9e60.js"
+    ]
+  },
+  "src/routes/blog/ada-lovelace-the-first-programmer.md": {
+    "file": "pages/blog/ada-lovelace-the-first-programmer.md-608ec034.js",
+    "src": "src/routes/blog/ada-lovelace-the-first-programmer.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js",
+      "__post-78cc9e60.js"
+    ]
+  },
+  "src/routes/blog/brightside-of-disappointment.md": {
+    "file": "pages/blog/brightside-of-disappointment.md-15a8fe93.js",
+    "src": "src/routes/blog/brightside-of-disappointment.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js",
+      "__post-78cc9e60.js"
+    ]
+  },
+  "src/routes/blog/is-igkids-ethical.md": {
+    "file": "pages/blog/is-igkids-ethical.md-96ec04fe.js",
+    "src": "src/routes/blog/is-igkids-ethical.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js",
+      "__post-78cc9e60.js"
+    ]
+  },
+  "src/routes/blog/cs-learn-video.md": {
+    "file": "pages/blog/cs-learn-video.md-3b598a81.js",
+    "src": "src/routes/blog/cs-learn-video.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-d7fef77c.js",
+      "__post-78cc9e60.js"
+    ]
+  },
+  "_vendor-d7fef77c.js": {
+    "file": "chunks/vendor-d7fef77c.js",
+    "dynamicImports": [
+      "node_modules/svelte-typewriter/src/modes/loopTypewriter.js",
+      "node_modules/svelte-typewriter/src/modes/scramble.js",
+      "node_modules/svelte-typewriter/src/modes/typewriter.js",
+      "node_modules/svelte-typewriter/src/helpers/sleep.js"
+    ],
+    "css": [
+      "assets/vendor-9c32722d.css"
+    ]
+  },
+  "__post-78cc9e60.js": {
+    "file": "chunks/_post-78cc9e60.js",
+    "imports": [
+      "_vendor-d7fef77c.js"
+    ]
+  },
+  "node_modules/svelte-typewriter/src/modes/loopTypewriter.js": {
+    "file": "chunks/loopTypewriter-7d751f25.js",
+    "src": "node_modules/svelte-typewriter/src/modes/loopTypewriter.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_writeEffect-c91baa5c.js",
+      "_vendor-d7fef77c.js",
+      "node_modules/svelte-typewriter/src/helpers/sleep.js"
+    ]
+  },
+  "_writeEffect-c91baa5c.js": {
+    "file": "chunks/writeEffect-c91baa5c.js",
+    "imports": [
+      "node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_vendor-d7fef77c.js"
+    ]
+  },
+  "node_modules/svelte-typewriter/src/helpers/sleep.js": {
+    "file": "chunks/sleep-b92576d7.js",
+    "src": "node_modules/svelte-typewriter/src/helpers/sleep.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/svelte-typewriter/src/modes/scramble.js": {
+    "file": "chunks/scramble-3cf54ab6.js",
+    "src": "node_modules/svelte-typewriter/src/modes/scramble.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_vendor-d7fef77c.js"
+    ]
+  },
+  "node_modules/svelte-typewriter/src/modes/typewriter.js": {
+    "file": "chunks/typewriter-6470ad95.js",
+    "src": "node_modules/svelte-typewriter/src/modes/typewriter.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_writeEffect-c91baa5c.js",
+      "node_modules/svelte-typewriter/src/helpers/sleep.js",
+      "_vendor-d7fef77c.js"
+    ],
+    "dynamicImports": [
+      "node_modules/svelte-typewriter/src/helpers/getLongestTextElement.js"
+    ]
+  },
+  "node_modules/svelte-typewriter/src/helpers/getLongestTextElement.js": {
+    "file": "chunks/getLongestTextElement-6c459af3.js",
+    "src": "node_modules/svelte-typewriter/src/helpers/getLongestTextElement.js",
+    "isDynamicEntry": true
+  }
+}
