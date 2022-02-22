@@ -19,7 +19,11 @@
   })
 </script>
 
-<div class="relative overflow-hidden" bind:this={div} class:collapsed>
+<div
+  class="relative w-full md:w-[740px] overflow-hidden"
+  bind:this={div}
+  class:collapsed
+>
   {@html html}
   {#if collapsed && mdHeight && mdHeight >= 1000}
     <div
