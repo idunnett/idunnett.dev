@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "rm -rf build && svelte-kit build && touch .svelte-kit/static/build/.nojekyll",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "deploy": "npm run build && npx gh-pages -d build"
+    "deploy": "npm run build && npx gh-pages -d .svelte-kit/static/build -t true"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",

@@ -15,7 +15,7 @@
 
   import Footer from '$lib/footer.svelte'
   import { fade } from 'svelte/transition'
-  // import '../app.css'
+  import '../app.css'
 </script>
 
 {#key currentRoute}
@@ -27,28 +27,3 @@
     <Footer />
   </div>
 {/key}
-
-<style>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  .md li {
-    list-style: disc;
-    list-style-position: inside;
-    margin-left: 16px;
-  }
-
-  .md p {
-    margin: 16px 0;
-  }
-
-  .md .references p {
-    text-indent: -3em;
-    margin-left: 3em;
-  }
-
-  .md a {
-    color: rgb(147, 197, 253);
-  }
-</style>
