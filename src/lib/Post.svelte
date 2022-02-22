@@ -8,7 +8,7 @@
   let collapsed: boolean = true
   let mdHeight: number
   onMount(() => {
-    mdHeight = div.querySelector('.md').clientHeight
+    mdHeight = div.querySelector('article').clientHeight
 
     const h1 = div.querySelector('h1')
     h1.classList.add('hover:text-blue-300')
