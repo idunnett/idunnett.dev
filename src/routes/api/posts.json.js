@@ -5,12 +5,13 @@ export const get = async () => {
 
   const allPosts = await Promise.all(
     iterablePostFiles.map(async ([path, resolver]) => {
-      const { metadata } = await resolver()
+      const data = await resolver()
       const postPath = path.slice(2, -3)
 
       return {
-        meta: metadata,
+        meta: data.metadata,
         path: postPath,
+        html: data.default.render().html,
       }
     })
   )

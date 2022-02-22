@@ -1,7 +1,7 @@
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 let camera: THREE.PerspectiveCamera
 let scene: THREE.Scene
@@ -68,7 +68,7 @@ const init = (sceneDiv: HTMLDivElement) => {
   sceneDiv.appendChild(renderer.domElement)
   // Load Model
   let loader = new GLTFLoader()
-  loader.load('/assets/truck/scene.gltf', (gltf: GLTF) => {
+  loader.load('3d/truck/scene.gltf', (gltf: GLTF) => {
     truck = gltf.scene.children[0]
     truck.traverse((n) => {
       if (n.isObject3D) {
@@ -78,17 +78,17 @@ const init = (sceneDiv: HTMLDivElement) => {
     truck.position.set(0, -20, 0)
     truck.scale.set(0.125, 0.125, 0.125)
     truck.rotation.x = -Math.PI / 2
-    truck.rotation.z = 3
+    truck.rotation.z = 2.9
     scene.add(truck)
 
-    loader.load('/assets/laptop/scene.gltf', (laptopGLTF: GLTF) => {
+    loader.load('3d/laptop/scene.gltf', (laptopGLTF: GLTF) => {
       laptop = laptopGLTF.scene.children[0]
-      laptop.position.set(6.5, -6, 24)
+      laptop.position.set(4.5, -6, 25)
       laptop.scale.set(0.175, 0.175, 0.175)
-      laptop.rotation.z = 1
+      laptop.rotation.z = 0.5
       scene.add(laptop)
 
-      loader.load('/assets/lawnchair/scene.gltf', (lawnChairGLFT: GLTF) => {
+      loader.load('3d/lawnchair/scene.gltf', (lawnChairGLFT: GLTF) => {
         lawnChair = lawnChairGLFT.scene.children[0]
         lawnChair.traverse((n) => {
           if (n.isObject3D) {
