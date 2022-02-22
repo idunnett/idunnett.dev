@@ -14,6 +14,10 @@ const config = {
   kit: {
     adapter: adapter(),
   },
+  paths: {
+    base: '/idunnett.dev',
+    assets: '/idunnett.dev',
+  },
 }
 
 export default config
