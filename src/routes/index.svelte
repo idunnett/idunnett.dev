@@ -24,7 +24,7 @@
 
 <Head />
 
-<div class="flex flex-col gap-10 w-full items-center justify-center py-16 px-4">
+<div class="flex flex-col gap-10 w-full items-center justify-center py-16">
   {#each postsMetadata as post}
     <Post html={post.html} path={post.path} />
   {/each}

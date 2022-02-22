@@ -20,7 +20,7 @@
   {/if}
 </svelte:head>
 
-<article class="relative text-white my-16">
+<article class="relative w-full md:w-[740px] text-white my-16 px-4">
   <h1 class="text-4xl text-blue-400 my-3 font-bold">
     {title}
   </h1>
