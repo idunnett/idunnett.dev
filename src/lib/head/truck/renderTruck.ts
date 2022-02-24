@@ -35,6 +35,7 @@ const init = (sceneDiv: HTMLDivElement) => {
   controls.minPolarAngle = Math.PI / 2
   controls.maxPolarAngle = Math.PI / 2
   controls.enableZoom = false
+  controls.enablePan = false
 
   // scene.add(new THREE.AxesHelper(500))
 
