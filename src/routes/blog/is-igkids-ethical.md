@@ -1,6 +1,6 @@
 ---
 title: "The Ethical Dilemmas of a Social Media Platform for Kids"
-date: "2021-11-04"
+date: "2021-11-19"
 layout: "blog"
 image:
   {

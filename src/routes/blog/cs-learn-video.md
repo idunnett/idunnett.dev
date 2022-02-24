@@ -1,6 +1,6 @@
 ---
 title: "Will a Computer Science degree cover everything I want to learn?"
-date: "2022-02-04"
+date: "2021-11-14"
 video: "https://www.youtube.com/embed/7A80XHp5WMY"
 layout: "blog"
 ---
