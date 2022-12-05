@@ -1,6 +1,6 @@
 # idunnett.dev
 
-Isaac Dunnett's portfolio & blog
+Isaac Dunnett's portfolio & blog.
 
 ## Tools Used:
 
