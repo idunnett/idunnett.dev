@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { FiExternalLink } from 'react-icons/fi'
+import { TbBrandNextjs } from 'react-icons/tb'
+import { SiPrisma, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import ImageSlider from '../components/ImageSlider.astro'
+import ToolIcon from '../components/ToolIcon.astro'
+import { BsGithub } from 'react-icons/bs'
+
+const gradeBaseImages = [
+  { src: '/gradebase/Dashboard.png', alt: 'Dashboard' },
+  { src: '/gradebase/MyCourse.png', alt: 'My course' },
+  { src: '/gradebase/School.png', alt: 'School' },
+  { src: '/gradebase/CreateDegree.png', alt: 'Create degree' },
+  { src: '/gradebase/FindCourse.png', alt: 'Find course' },
+]
+---
+
+<BaseLayout>
+  <div class="flex flex-col gap-8">
+    <article class="flex flex-col gap-4">
+      <div class="flex flex-col gap-0.5">
+        <a
+          href="https://www.gradebase.ca"
+          target="_blank"
+          class="w-min text-blue-500 flex items-center gap-1.5 hover:border-blue-500 border-b border-transparent"
+        >
+          <span>gradebase.ca</span>
+          <FiExternalLink />
+        </a>
+        <div class="flex items-center justify-between gap-4">
+          <h3 class="tracking-tight text-slate-400 dark:text-white">
+            Grade<span class="text-slate-500 dark:text-slate-400">Base</span>
+          </h3>
+          <a
+            href="https://github.com/idunnett/grade-base"
+            target="_blank"
+            aria-label="grade-base repo"
+            class="w-min hover:text-black"
+          >
+            <BsGithub className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+      <ImageSlider images={gradeBaseImages} />
+      <p class="my-0">
+        A platform for university students used to plan term schedules and track
+        progress in their degrees and courses. The application produces visual
+        analytics to aid students' academic organization and time management.
+      </p>
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-sm">Built with:</span>
+        <div class="flex items-center gap-4">
+          <ToolIcon name="NextJS">
+            <TbBrandNextjs className="h-8 w-8 text-black" />
+          </ToolIcon>
+          <ToolIcon name="Typescript">
+            <SiTypescript className="h-7 w-7 text-[#0188D1]" />
+          </ToolIcon>
+          <ToolIcon name="Prisma">
+            <SiPrisma className="w-7 h-7 text-[#2D3748]" />
+          </ToolIcon>
+          <ToolIcon name="TailwindCSS">
+            <SiTailwindcss className="w-7 h-7 text-[#4CB6AC]" />
+          </ToolIcon>
+          <ToolIcon name="tRPC">
+            <img src="/icons/trpc.svg" class="w-7 h-7" />
+          </ToolIcon>
+        </div>
+      </div>
+    </article>
+    <article class="flex flex-col gap-4">
+      <div class="flex flex-col gap-0.5">
+        <span class="w-min text-blue-500">idunnett.dev</span>
+        <div class="flex items-center justify-between gap-4">
+          <h3 class="tracking-tight text-black">
+            idunnett.dev
+            <span class="text-lg text-gray-400 font-normal">(this site)</span>
+          </h3>
+          <a
+            href="https://github.com/idunnett/idunnett.dev"
+            target="_blank"
+            aria-label="idunnett.dev repo"
+            class="w-min hover:text-black"
+          >
+            <BsGithub className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-sm">Built with:</span>
+        <div class="flex items-center gap-4">
+          <ToolIcon name="Astro">
+            <img src="/icons/astro.svg" class="w-7 h-7" />
+          </ToolIcon>
+          <ToolIcon name="React">
+            <SiReact className="w-7 h-7 text-[#0188D1]" />
+          </ToolIcon>
+          <ToolIcon name="Typescript">
+            <SiTypescript className="h-7 w-7 text-[#0188D1]" />
+          </ToolIcon>
+          <ToolIcon name="TailwindCSS">
+            <SiTailwindcss className="w-7 h-7 text-[#4CB6AC]" />
+          </ToolIcon>
+        </div>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

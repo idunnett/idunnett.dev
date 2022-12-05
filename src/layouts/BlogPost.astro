@@ -1,0 +1,59 @@
+---
+import BaseLayout from './BaseLayout.astro'
+
+interface Image {
+  src: 'lovelace.jpeg'
+  reference: 'https://www.biography.com/scholar/ada-lovelace'
+  alt: 'Ada Lovelace Portrait'
+}
+
+export interface Props {
+  content: {
+    title: string
+    description: string
+    pubDate?: string
+    updatedDate?: string
+    image?: Image
+    video?: string
+  }
+}
+
+const {
+  content: { title, pubDate, updatedDate, image, video },
+} = Astro.props
+---
+
+<BaseLayout>
+  <article>
+    {
+      image && (
+        <img height={360} src={image.src} alt={image.alt} class="rounded-md" />
+      )
+    }
+    <h2 class="text-3xl mt-4">{title}</h2>
+    {pubDate && <time>{pubDate}</time>}
+    {
+      updatedDate && (
+        <div>
+          Last updated on <time>{updatedDate}</time>
+        </div>
+      )
+    }
+    <hr class="border-t border-[#ddd] my-4" />
+    <div class="text-black">
+      <slot />
+    </div>
+    {
+      video && (
+        <iframe
+          title={title}
+          src={video}
+          class="w-full h-80 mt-8"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          frameborder="0"
+          allowfullscreen
+        />
+      )
+    }
+  </article>
+</BaseLayout>

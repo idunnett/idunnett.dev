@@ -1,0 +1,11 @@
+---
+interface Props {
+  src: string
+  width: string
+  height: string
+  alt: string
+  class?: string
+}
+---
+
+<img loading="lazy" {...Astro.props} class="object-cover" />

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+	{
+		@apply text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-purple-500;
+	}
+	h1 {
+		@apply font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
+	}
+	h2 {
+		@apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold;
+	}
+	h3 {
+		@apply font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+	}
+	body {
+		@apply bg-white w-screen text-gray-500 text-left flex justify-center;
+			font-family: 'Raleway', sans-serif;
+	}
+	.main-container {
+		@apply z-10 w-full sm:w-11/12 md:w-4/5 lg:w-3/5 bg-white px-5 my-0 sm:my-5 rounded-xl;
+		box-shadow: 0px 0px 20px white;
+	}
+	.header-link {
+		@apply text-gray-500 mr-2 hover:text-black;
+	}
+	.header-link.active{
+		@apply text-black font-bold;
+	}
+	#particles {
+		@apply absolute top-0 left-0 h-screen w-screen animate-fade-in;
+	}
+	article p {
+		@apply my-3;
+	}
+	.references > h3 {
+		@apply text-black text-left text-lg font-bold;
+	}
+	.references a {
+		@apply text-blue-500;
+	}
+}

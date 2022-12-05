@@ -1,0 +1,55 @@
+---
+import CldImage from '../components/CldImage.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+)
+---
+
+<BaseLayout>
+  <section>
+    <ul class="flex flex-col gap-1">
+      {
+        posts.map((post) => (
+          <li class="flex items-center">
+            <a
+              href={post.url}
+              class="relative px-4 py-2 w-full rounded-md hover:bg-gray-50 visited:text-gray-600 text-gray-500 cursor-pointer flex gap-2"
+            >
+              {post.frontmatter.image && (
+                <CldImage
+                  src={post.frontmatter.image.src}
+                  alt={post.frontmatter.image.alt}
+                  height="48"
+                  width="48"
+                />
+              )}
+              <div class="flex flex-col">
+                <time
+                  datetime={post.frontmatter.pubDate}
+                  class="italic text-sm"
+                >
+                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                    'en-us',
+                    {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    }
+                  )}
+                </time>
+                <span class="text-lg font-medium">
+                  {post.frontmatter.title}
+                </span>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
