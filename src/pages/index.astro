@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import { FiExternalLink } from 'react-icons/fi/index.js'
 import { TbBrandNextjs } from 'react-icons/tb/index.js'
 import {
+  SiMysql,
   SiPrisma,
   SiReact,
   SiTailwindcss,
@@ -11,6 +12,12 @@ import {
 import { BsGithub } from 'react-icons/bs/index.js'
 import ImageSlider from '../components/ImageSlider.astro'
 import ToolIcon from '../components/ToolIcon.astro'
+
+const struxtsImages = [
+  { src: '/struxts/Struxt.png', alt: 'Struxts chart' },
+  { src: '/struxts/NodeDetails.png', alt: 'Struxts Node details' },
+  { src: '/struxts/Create.png', alt: 'Create Struxt' },
+]
 
 const gradeBaseImages = [
   { src: '/gradebase/Dashboard.png', alt: 'Dashboard' },
@@ -23,6 +30,57 @@ const gradeBaseImages = [
 
 <BaseLayout>
   <div class="flex flex-col gap-8">
+    <article class="flex flex-col gap-4">
+      <div class="flex flex-col gap-0.5">
+        <a
+          href="https://www.struxts.com"
+          target="_blank"
+          class="w-min text-blue-500 flex items-center gap-1.5 hover:border-blue-500 border-b border-transparent"
+        >
+          <span>struxts.com</span>
+          <FiExternalLink />
+        </a>
+        <div class="flex items-center justify-between gap-4">
+          <h3 class="tracking-tight text-black">Struxts</h3>
+          <a
+            href="https://github.com/idunnett/struxts"
+            target="_blank"
+            aria-label="struxts repo"
+            class="w-min hover:text-black"
+          >
+            <BsGithub className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+      <ImageSlider id="struxts-slider" images={struxtsImages} />
+      <p class="my-0">
+        A web application for building and sharing interactive structures and
+        organizational charts that look good!
+      </p>
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-sm">Built with:</span>
+        <div class="flex items-center gap-4">
+          <ToolIcon name="NextJS">
+            <TbBrandNextjs className="h-8 w-8 text-black" />
+          </ToolIcon>
+          <ToolIcon name="Typescript">
+            <SiTypescript className="h-7 w-7 text-[#0188D1]" />
+          </ToolIcon>
+          <ToolIcon name="Prisma">
+            <SiPrisma className="w-7 h-7 text-[#2D3748]" />
+          </ToolIcon>
+          <ToolIcon name="TailwindCSS">
+            <SiTailwindcss className="w-7 h-7 text-[#4CB6AC]" />
+          </ToolIcon>
+          <ToolIcon name="tRPC">
+            <img src="/icons/trpc.svg" class="w-7 h-7" />
+          </ToolIcon>
+          <ToolIcon name="MySQL">
+            <SiMysql className="w-7 h-7 text-[#4479A1]" />
+          </ToolIcon>
+        </div>
+      </div>
+    </article>
     <article class="flex flex-col gap-4">
       <div class="flex flex-col gap-0.5">
         <a
@@ -47,7 +105,7 @@ const gradeBaseImages = [
           </a>
         </div>
       </div>
-      <ImageSlider images={gradeBaseImages} />
+      <ImageSlider id="gradebase-slider" images={gradeBaseImages} />
       <p class="my-0">
         A platform for university students used to plan term schedules and track
         progress in their degrees and courses. The application produces visual
