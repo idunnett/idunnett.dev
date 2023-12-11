@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { FiExternalLink } from 'react-icons/fi/index.js'
 import { TbBrandNextjs } from 'react-icons/tb/index.js'
+import { SiSvelte, SiSanity } from 'react-icons/si/index.js'
 import {
   SiMysql,
   SiPrisma,
@@ -12,6 +13,12 @@ import {
 import { BsGithub } from 'react-icons/bs/index.js'
 import ImageSlider from '../components/ImageSlider.astro'
 import ToolIcon from '../components/ToolIcon.astro'
+
+const mj4TravelImages = [
+  { src: '/mj4Travel/Landing.png', alt: 'MJ4Travel Landing Page' },
+  { src: '/mj4Travel/TravelStyles.png', alt: 'MJ4Travel Travel Styles Page' },
+  { src: '/mj4Travel/ContactUs.png', alt: 'MJ4Travel Contact Us' },
+]
 
 const struxtsImages = [
   { src: '/struxts/Struxt.png', alt: 'Struxts chart' },
@@ -30,6 +37,53 @@ const gradeBaseImages = [
 
 <BaseLayout>
   <div class="flex flex-col gap-8">
+    <article class="flex flex-col gap-4">
+      <div class="flex flex-col gap-0.5">
+        <a
+          href="https://www.mj4travel.com/"
+          target="_blank"
+          class="w-min text-blue-500 flex items-center gap-1.5 hover:border-blue-500 border-b border-transparent"
+        >
+          <span>mj4travel.com</span>
+          <FiExternalLink />
+        </a>
+        <div class="flex items-center justify-between gap-4">
+          <h3 class="tracking-tight text-black">MJ4Travel Inc.</h3>
+          <a
+            href="https://github.com/idunnett/mj4travel"
+            target="_blank"
+            aria-label="struxts repo"
+            class="w-min hover:text-black"
+          >
+            <BsGithub className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+      <ImageSlider id="mj4travel-slider" images={mj4TravelImages} dark />
+      <p class="my-0">
+        A static website for the promotion of the travel agency MJ4Travel Inc.
+        The site is built with SvelteKit and TailwindCSS. The content/data used
+        within the site is held within Sanity.io (a headless CMS) allowing site
+        admin full control over their content.
+      </p>
+      <div class="flex flex-col items-center gap-2">
+        <span class="text-sm">Built with:</span>
+        <div class="flex items-center gap-4">
+          <ToolIcon name="SvelteKit">
+            <SiSvelte className="h-8 w-8 text-[#FF3E00]" />
+          </ToolIcon>
+          <ToolIcon name="Typescript">
+            <SiTypescript className="h-7 w-7 text-[#0188D1]" />
+          </ToolIcon>
+          <ToolIcon name="TailwindCSS">
+            <SiTailwindcss className="w-7 h-7 text-[#4CB6AC]" />
+          </ToolIcon>
+          <ToolIcon name="Sanity CMS">
+            <SiSanity className="w-7 h-7 text-[#F03E30]" />
+          </ToolIcon>
+        </div>
+      </div>
+    </article>
     <article class="flex flex-col gap-4">
       <div class="flex flex-col gap-0.5">
         <a
@@ -94,6 +148,9 @@ const gradeBaseImages = [
         <div class="flex items-center justify-between gap-4">
           <h3 class="tracking-tight text-slate-400 dark:text-white">
             Grade<span class="text-slate-500 dark:text-slate-400">Base</span>
+            <span class="text-gray-500 text-lg font-normal tracking-normal">
+              (temporarily down)
+            </span>
           </h3>
           <a
             href="https://github.com/idunnett/grade-base"
@@ -138,7 +195,9 @@ const gradeBaseImages = [
         <div class="flex items-center justify-between gap-4">
           <h3 class="tracking-tight text-black">
             idunnett.dev
-            <span class="text-lg text-gray-400 font-normal">(this site)</span>
+            <span class="text-lg font-normal text-gray-500 tracking-normal">
+              (this site)
+            </span>
           </h3>
           <a
             href="https://github.com/idunnett/idunnett.dev"

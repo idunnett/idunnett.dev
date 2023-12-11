@@ -6,14 +6,15 @@ interface Image {
 interface Props {
   id: string
   images: Image[]
+  dark?: boolean
 }
 
-const { images, id } = Astro.props
+const { images, id, dark = false } = Astro.props
 ---
 
 <div
   id={'carouselCaptions-' + id}
-  class="carousel carousel-dark slide relative"
+  class={`carousel slide relative ${dark ? 'carousel-light' : 'carousel-dark'}`}
   data-bs-ride="carousel"
 >
   <div
