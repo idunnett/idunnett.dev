@@ -1,4 +1,6 @@
 ---
+import { cn } from '../lib/utils'
+
 interface Props {
   src: string
   width: string
@@ -8,4 +10,19 @@ interface Props {
 }
 ---
 
-<img loading="lazy" {...Astro.props} class="object-cover" />
+<img
+  loading="lazy"
+  alt={Astro.props.alt}
+  src={Astro.props.src}
+  class={cn('object-cover', Astro.props.class)}
+  style={{
+    width:
+      Astro.props.width === 'auto' || Astro.props.width.includes('%')
+        ? Astro.props.width
+        : Astro.props.width + 'px',
+    height:
+      Astro.props.height === 'auto' || Astro.props.height.includes('%')
+        ? Astro.props.height
+        : Astro.props.height + 'px',
+  }}
+/>

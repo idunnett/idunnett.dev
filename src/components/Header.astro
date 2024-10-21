@@ -1,42 +1,46 @@
 ---
-import { BsGithub, BsLinkedin } from 'react-icons/bs/index.js'
-import HeaderLink from './HeaderLink.astro'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { SITE_TITLE } from '../config'
+import CldImage from './CldImage.astro'
+import HeaderLink from './HeaderLink.astro'
 ---
 
 <header>
-  <h2>
-    {SITE_TITLE}
-  </h2>
-  <nav class="flex items-center text-xl">
-    <HeaderLink href="/">Portfolio</HeaderLink>
-    <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-    <HeaderLink href="/about">About</HeaderLink>
-    <div class="flex items-center border-l-2 px-3">
-      <HeaderLink
-        href="https://github.com/idunnett"
-        target="_blank"
-        class="flex items-center gap-1"
-        aria-label="Github"
-      >
-        <BsGithub />
-      </HeaderLink>
-      <HeaderLink
-        href="https://www.linkedin.com/in/isaacdunnett"
-        target="_blank"
-        class="flex items-center gap-1"
-        aria-label="LinkedIn"
-      >
-        <BsLinkedin />
-      </HeaderLink>
+  <div class="flex justify-between items-end py-4">
+    <div class="flex flex-col gap-4">
+      <h2>
+        {SITE_TITLE}
+      </h2>
+      <nav class="flex items-center text-xl">
+        <HeaderLink href="/">Portfolio</HeaderLink>
+        <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
+        <!-- <HeaderLink href="/about">About</HeaderLink> -->
+        <div class="flex items-center border-l-2 px-3">
+          <HeaderLink
+            href="https://github.com/idunnett"
+            target="_blank"
+            class="flex items-center gap-1"
+            aria-label="Github"
+          >
+            <BsGithub />
+          </HeaderLink>
+          <HeaderLink
+            href="https://www.linkedin.com/in/isaacdunnett"
+            target="_blank"
+            class="flex items-center gap-1"
+            aria-label="LinkedIn"
+          >
+            <BsLinkedin />
+          </HeaderLink>
+        </div>
+      </nav>
     </div>
-  </nav>
+    <CldImage
+      src="/isaacdunnett.jpg"
+      alt="Isaac Dunnett"
+      width="160"
+      height="160"
+      class="rounded-3xl"
+    />
+  </div>
 </header>
-<style>
-  header {
-    margin: 0em 0 2em;
-  }
-  h2 {
-    margin: 0.5em 0;
-  }
-</style>

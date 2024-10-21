@@ -8,4 +8,3 @@ Isaac Dunnett's portfolio & blog.
 - React
 - Typescript
 - TailwindCSS
-- TSParticles
